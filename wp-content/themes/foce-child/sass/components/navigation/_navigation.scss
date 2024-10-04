@@ -1,0 +1,174 @@
+#site-navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 40%;
+    
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 132px;
+        padding: 0;
+        cursor: pointer;
+        position: relative;
+        width: 40px;
+        height: 18px;
+
+        .line {
+            background-color: #000;
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            transition: transform 0.3s ease;
+
+            &::before,
+            &::after {
+                content: "";
+                background-color: #000;
+                width: 100%;
+                height: 1.5px;
+                left: 0;
+                position: absolute;
+                transition: transform 0.3s ease;
+            }
+
+            &::before {
+                top: -9px;
+            }
+
+            &::after {
+                top: 9px;
+            }
+        }
+
+        &.active {
+            .line {
+                background-color: transparent;
+
+                &::before {
+                    top: 0;
+                    transform: rotate(45deg);
+                }
+
+                &::after {
+                    top: 0;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    .menu-burger li,
+    .fleurs,
+    .chats {
+        display: none;
+    }
+
+
+    &.toggled {
+        .menu-burger {
+            display: flex;
+            position: fixed;
+            width: 100%;
+            top: 80px;
+            right: 0;
+            background-color: #FFF5E9;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .menu-burger li,
+        .fleurs,
+        .chats {
+            display: block;
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+
+        .fleurs,
+        .chats {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+
+            img {
+                position: absolute;
+                width: auto;
+                height: auto;
+            }
+        }
+
+        .fleurs {
+
+            img {
+                animation: rotate 10s infinite linear;
+            }
+
+            .orchid {
+                top: 152px;
+                left: -59px;
+                height: 168.24px;
+            }
+
+            .sunflower {
+                top: 169px;
+                left: 1039px;
+                height: 216px;
+            }
+
+            .random-flower {
+                top: 475px;
+                left: 1396px;
+                height: 74.53px;
+            }
+
+            .flower {
+                top: 563px;
+                left: 213px;
+                height: 70.76px;
+            }
+
+            .hibiscus {
+                top: 740px;
+                left: 1122px;
+                height: 626px;
+            }
+        }
+
+        .chats {
+
+            .cat1 {
+                top: 241px;
+                left: 267px;
+                height: 98.63px;
+            }
+
+            .cat2 {
+                top: 550px;
+                left: 1076px;
+                height: 147.57px;
+            }
+
+            .cat3 {
+                top: 827px;
+                left: 79px;
+                height: 95.65px;
+            }
+        }
+    }
+
+
+    .menu-burger a {
+        color: #000;
+        font-size: 64px;
+        padding: 20px;
+    }
+
+    .menu-burger a:hover {
+        color: #000;
+        text-shadow: 0 0 14px #FF5C00;
+    }
+}

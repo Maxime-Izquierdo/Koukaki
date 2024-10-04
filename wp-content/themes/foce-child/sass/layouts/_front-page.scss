@@ -1,0 +1,282 @@
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#story h2::after,
+.story__article::after,
+#studio h2::before,
+#studio h2::after,
+.oscars::before,
+.site-footer ul::after,
+.oscars::after {
+  animation: fadeInUp 2s ease-in-out forwards, rotate 10s infinite linear 2s;
+}
+
+.logoAnim,
+span,
+#characters,
+#place,
+#studio h2,
+#oscars,
+.site-footer,
+#story h2::before,
+.story__article::before,
+#studio div::before,
+.site-footer {
+  animation: fadeInUp 2s ease-in-out forwards;
+}
+
+
+.banner {
+  background-image: none;
+
+  .parallax-video {
+    width: 1440px;
+    height: 806px;
+
+    video {
+      animation: fadeInDown 2s ease-in-out forwards;
+      object-fit: cover;
+      position: fixed;
+      z-index: -1;
+    }
+  }
+
+  img {
+    position: absolute;
+    width: 680.7px;
+    height: 479.04px;
+  }
+}
+
+.site-main {
+  background-color: #FFF5E9;
+  padding-top: 117px;
+
+  #story {
+    z-index: 1;
+
+    h2 span {
+      display: inline-block;
+    }
+
+    h2::before {
+      height: 188px;
+    }
+
+    h2::after {
+      height: 154px;
+    }
+  }
+
+  .story #characters {
+    display: block;
+    margin-top: 129px;
+
+    h3 {
+      background-position-x: 40px;
+      text-align: left;
+    }
+
+    div {
+      flex: none !important;
+    }
+
+    .main-character {
+      max-width: 1440px;
+      height: 620px;
+      overflow-x: hidden;
+
+      .swiper-container {
+        width: 100%;
+        height: 450px;
+      }
+
+      .swiper-slide {
+        width: 400px;
+        height: 400px;
+      }
+    }
+  }
+
+  #place {
+    background-image: url("assets/images/Studio_koukaki-image_place.png") !important;
+    margin-bottom: 111.59px;
+
+    .nuages {
+      position: absolute;
+      width: 100%;
+      height: 238px;
+
+      .little-cloud,
+      .big-cloud {
+        position: absolute;
+        filter: blur(4px);
+      }
+
+      .little-cloud {
+        top: 248px;
+        left: 793px;
+      }
+
+      .big-cloud {
+        top: 65px;
+        left: 1031px;
+      }
+    }
+  }
+
+  #studio {
+    h2 {
+      margin-bottom: 57px;
+
+      &::before {
+        height: 198.99px;
+      }
+
+      &::after {
+        height: 108.76px;
+      }
+    }
+  }
+
+  .oscars {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    margin-bottom: 125px;
+    overflow: hidden;
+
+    &::before {
+      content: url('assets/images/Sunflower.png');
+      position: absolute;
+      left: 102px;
+      top: 80px;
+    }
+
+    &::after {
+      content: url('assets/images/orchid.png');
+      position: absolute;
+      right: -4em;
+    }
+
+    div {
+      width: 762px;
+      height: 300px;
+      padding: 20px 20px 0 0;
+      margin-top: 160px;
+      background-image: url("assets/images/Rectangle23.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+
+      h3 {
+        text-align: left;
+        font-size: 37px;
+      }
+    }
+
+    img {
+      margin-top: 200px;
+      margin-right: 80px;
+    }
+
+
+    @media all and (max-width: #{$breakpoint__laptop}) {
+      flex-direction: column;
+      align-items: center;
+
+      div {
+
+        h3 {
+          font-size: 32px;
+          text-align: center;
+        }
+      }
+
+      img {
+        margin-top: 20px;
+        width: 50%;
+      }
+    }
+  }
+
+  @media all and (max-width: #{$breakpoint__tablet}) {
+
+    div {
+
+      h3 {
+        font-size: 28px;
+        margin: 50px 20px;
+      }
+    }
+
+    img {
+      width: 40%;
+      margin-top: 15px;
+    }
+  }
+
+  @media all and (max-width: #{$breakpoint__small_tablet}) {
+
+    div {
+
+      h3 {
+        font-size: 24px;
+        text-align: center;
+        margin: 40px 20px;
+      }
+    }
+
+    img {
+      width: 50%;
+      margin-top: 10px;
+    }
+  }
+
+  @media all and (max-width: #{$breakpoint__large_phone}) {
+
+    div {
+      width: 80%;
+
+      h3 {
+        font-size: 24px;
+      }
+    }
+
+    img {
+      width: 40%;
+      margin-top: 5px;
+    }
+  }
+}

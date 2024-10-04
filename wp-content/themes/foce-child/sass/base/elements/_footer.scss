@@ -1,0 +1,11 @@
+.site-footer {
+ 
+  &::before {
+    display: none;
+  }
+  
+  &::after {
+   display: none;
+  }
+}
+  

@@ -1,0 +1,344 @@
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#story h2::after, .story__article::after, #studio h2::before, #studio h2::after, .oscars::before, .site-footer ul::after, .oscars::after {
+  animation: fadeInUp 2s ease-in-out forwards, rotate 10s infinite linear 2s;
+}
+.logoAnim, span, #characters, #place, #studio h2, #oscars, .site-footer, #story h2::before, .story__article::before, #studio div::before {
+  animation: fadeInUp 2s ease-in-out forwards;
+}
+.banner {
+  background-image: none;
+}
+.banner .parallax-video {
+  width: 1440px;
+  height: 806px;
+}
+.banner .parallax-video video {
+  animation: fadeInDown 2s ease-in-out forwards;
+  object-fit: cover;
+  position: fixed;
+  z-index: -1;
+}
+.banner img {
+  position: absolute;
+  width: 680.7px;
+  height: 479.04px;
+}
+.site-main {
+  background-color: #FFF5E9;
+  padding-top: 117px;
+}
+.site-main #story {
+  z-index: 1;
+}
+.site-main #story h2 span {
+  display: inline-block;
+}
+.site-main #story h2::before {
+  height: 188px;
+}
+.site-main #story h2::after {
+  height: 154px;
+}
+.site-main .story #characters {
+  display: block;
+  margin-top: 129px;
+}
+.site-main .story #characters h3 {
+  background-position-x: 40px;
+  text-align: left;
+}
+.site-main .story #characters div {
+  flex: none !important;
+}
+.site-main .story #characters .main-character {
+  max-width: 1440px;
+  height: 620px;
+  overflow-x: hidden;
+}
+.site-main .story #characters .main-character .swiper-container {
+  width: 100%;
+  height: 450px;
+}
+.site-main .story #characters .main-character .swiper-slide {
+  width: 400px;
+  height: 400px;
+}
+.site-main #place {
+  background-image: url("assets/images/Studio_koukaki-image_place.png") !important;
+  margin-bottom: 111.59px;
+}
+.site-main #place .nuages {
+  position: absolute;
+  width: 100%;
+  height: 238px;
+}
+.site-main #place .nuages .little-cloud, .site-main #place .nuages .big-cloud {
+  position: absolute;
+  filter: blur(4px);
+}
+.site-main #place .nuages .little-cloud {
+  top: 248px;
+  left: 793px;
+}
+.site-main #place .nuages .big-cloud {
+  top: 65px;
+  left: 1031px;
+}
+.site-main #studio h2 {
+  margin-bottom: 57px;
+}
+.site-main #studio h2::before {
+  height: 198.99px;
+}
+.site-main #studio h2::after {
+  height: 108.76px;
+}
+.site-main .oscars {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  margin-bottom: 125px;
+  overflow: hidden;
+}
+.site-main .oscars::before {
+  content: url("assets/images/Sunflower.png");
+  position: absolute;
+  left: 102px;
+  top: 80px;
+}
+.site-main .oscars::after {
+  content: url("assets/images/orchid.png");
+  position: absolute;
+  right: -4em;
+}
+.site-main .oscars div {
+  width: 762px;
+  height: 300px;
+  padding: 20px 20px 0 0;
+  margin-top: 160px;
+  background-image: url("assets/images/Rectangle23.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.site-main .oscars div h3 {
+  text-align: left;
+  font-size: 37px;
+}
+.site-main .oscars img {
+  margin-top: 200px;
+  margin-right: 80px;
+}
+@media (max-width: 1192px) {
+  .site-main .oscars {
+    flex-direction: column;
+    align-items: center;
+  }
+  .site-main .oscars div h3 {
+    font-size: 32px;
+    text-align: center;
+  }
+  .site-main .oscars img {
+    margin-top: 20px;
+    width: 50%;
+  }
+}
+@media (max-width: 1040px) {
+  .site-main div h3 {
+    font-size: 28px;
+    margin: 50px 20px;
+  }
+  .site-main img {
+    width: 40%;
+    margin-top: 15px;
+  }
+}
+@media (max-width: 920px) {
+  .site-main div h3 {
+    font-size: 24px;
+    text-align: center;
+    margin: 40px 20px;
+  }
+  .site-main img {
+    width: 50%;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 700px) {
+  .site-main div {
+    width: 80%;
+  }
+  .site-main div h3 {
+    font-size: 24px;
+  }
+  .site-main img {
+    width: 40%;
+    margin-top: 5px;
+  }
+}
+#site-navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 40%;
+}
+#site-navigation button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 132px;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  width: 40px;
+  height: 18px;
+}
+#site-navigation button .line {
+  background-color: #000;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+#site-navigation button .line::before, #site-navigation button .line::after {
+  content: "";
+  background-color: #000;
+  width: 100%;
+  height: 1.5px;
+  left: 0;
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+#site-navigation button .line::before {
+  top: -9px;
+}
+#site-navigation button .line::after {
+  top: 9px;
+}
+#site-navigation button.active .line {
+  background-color: transparent;
+}
+#site-navigation button.active .line::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+#site-navigation button.active .line::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+#site-navigation .menu-burger li, #site-navigation .fleurs, #site-navigation .chats {
+  display: none;
+}
+#site-navigation.toggled .menu-burger {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  top: 80px;
+  right: 0;
+  background-color: #FFF5E9;
+  flex-direction: column;
+  justify-content: center;
+}
+#site-navigation.toggled .menu-burger li, #site-navigation.toggled .fleurs, #site-navigation.toggled .chats {
+  display: block;
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+#site-navigation.toggled .fleurs, #site-navigation.toggled .chats {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#site-navigation.toggled .fleurs img, #site-navigation.toggled .chats img {
+  position: absolute;
+  width: auto;
+  height: auto;
+}
+#site-navigation.toggled .fleurs img {
+  animation: rotate 10s infinite linear;
+}
+#site-navigation.toggled .fleurs .orchid {
+  top: 152px;
+  left: -59px;
+  height: 168.24px;
+}
+#site-navigation.toggled .fleurs .sunflower {
+  top: 169px;
+  left: 1039px;
+  height: 216px;
+}
+#site-navigation.toggled .fleurs .random-flower {
+  top: 475px;
+  left: 1396px;
+  height: 74.53px;
+}
+#site-navigation.toggled .fleurs .flower {
+  top: 563px;
+  left: 213px;
+  height: 70.76px;
+}
+#site-navigation.toggled .fleurs .hibiscus {
+  top: 740px;
+  left: 1122px;
+  height: 626px;
+}
+#site-navigation.toggled .chats .cat1 {
+  top: 241px;
+  left: 267px;
+  height: 98.63px;
+}
+#site-navigation.toggled .chats .cat2 {
+  top: 550px;
+  left: 1076px;
+  height: 147.57px;
+}
+#site-navigation.toggled .chats .cat3 {
+  top: 827px;
+  left: 79px;
+  height: 95.65px;
+}
+#site-navigation .menu-burger a {
+  color: #000;
+  font-size: 64px;
+  padding: 20px;
+}
+#site-navigation .menu-burger a:hover {
+  color: #000;
+  text-shadow: 0 0 14px #FF5C00;
+}
+.site-footer::before {
+  display: none;
+}
+.site-footer::after {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
