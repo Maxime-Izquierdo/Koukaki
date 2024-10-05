@@ -38,6 +38,9 @@
 .banner .parallax-video {
   width: 1440px;
   height: 806px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .banner .parallax-video video {
   animation: fadeInDown 2s ease-in-out forwards;
@@ -45,10 +48,11 @@
   position: fixed;
   z-index: -1;
 }
-.banner img {
-  position: absolute;
+.banner .parallax-video img {
   width: 680.7px;
   height: 479.04px;
+  position: fixed;
+  z-index: -1;
 }
 .site-main {
   background-color: #FFF5E9;

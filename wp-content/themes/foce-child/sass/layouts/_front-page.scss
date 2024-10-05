@@ -63,6 +63,9 @@ span,
   .parallax-video {
     width: 1440px;
     height: 806px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     video {
       animation: fadeInDown 2s ease-in-out forwards;
@@ -70,12 +73,13 @@ span,
       position: fixed;
       z-index: -1;
     }
-  }
 
-  img {
-    position: absolute;
-    width: 680.7px;
-    height: 479.04px;
+    img {
+      width: 680.7px;
+      height: 479.04px;
+      position: fixed;
+      z-index: -1;
+    }
   }
 }
 

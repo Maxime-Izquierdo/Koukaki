@@ -7,8 +7,9 @@ get_header();
         <video id="background-video" autoplay loop muted poster="<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?>">
             <source src="<?php echo get_stylesheet_directory_uri() ?> /assets/videos/StudioVideo.mp4  " type="video/mp4">
         </video>
-        </div>
         <img class="logoAnim" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+        </div>
+        
     </section>
 <main id="primary" class="site-main">
     
